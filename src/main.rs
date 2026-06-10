@@ -4,7 +4,7 @@ use std::{env, fs, path::Path, thread::sleep, time::Duration};
 const VID: u16 = 0x1c75;
 const PID_MF1: u16 = 0xaf80;
 const PID_MF2: u16 = 0xaf90;
-const SYSFS_PATH: &str = "/dev/minifuse_cmd";
+const SYSFS_PATH: &str = "/dev/minifuse";
 
 fn parse_selector(target: &str) -> Option<u16> {
     match target {

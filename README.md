@@ -4,10 +4,28 @@
 actively reverse-engineering the coms to implement more functionality from the
 official Minifuse Control Center as time goes.
 
+## Usage
+
+```nix
+# Add the input
+inputs.mfctl = {
+  url = "github:debarchito/mfctl";
+  inputs.nixpkgs.follows = "nixpkgs"; # Optional
+};
+
+# Add the NixOS module
+modules = [
+  inputs.mfctl.nixosModules.default
+]
+
+# Enable mfctl
+programs.mfctl.enable = true;
+```
+
 ## License
 
 This project consists of two components, which are licensed separately:
 
 - The rust utility i.e. `mfctl` is licensed under the [MIT License](/LICENSE).
-- The kernel module (under [kmod](/kmod)) is licensed under the **GNU General
-  Public License v2.0**.
+- The kernel module (under [kmod](/kmod)) is licensed under the
+  [GNU General Public License v2.0](/kmod/LICENSE).

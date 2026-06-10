@@ -79,7 +79,7 @@ static const struct file_operations mf_fops = {
 
 static struct miscdevice mf_misc = {
     .minor = MISC_DYNAMIC_MINOR,
-    .name = "minifuse_cmd",
+    .name = "minifuse",
     .fops = &mf_fops,
     .mode = 0222, // World-writable is fully allowed for character devices!
 };
