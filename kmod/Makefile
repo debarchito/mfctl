@@ -1,4 +1,4 @@
-obj-m += minifuse_mod.o
+obj-m += minifuse.o
 
 # DKMS provides KERNELRELEASE. If not set, fallback to the currently running kernel.
 KVER ?= $(if $(KERNELRELEASE),$(KERNELRELEASE),$(shell uname -r))

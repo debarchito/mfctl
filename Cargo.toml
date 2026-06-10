@@ -1,5 +1,5 @@
 [package]
-name = "mf-cli"
+name = "mfctl"
 version = "0.2.3"
 edition = "2024"
 
